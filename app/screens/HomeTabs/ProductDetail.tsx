@@ -37,8 +37,6 @@ const ProductDetails = () => {
   const [productDetail, setProductDetail] = useState<any>();
   const [sizesArr, setSeizesArr] = useState<any>([]);
 
-  const URL = [_1, _2, _3, _4, _5];
-
   const getProductDetail = async () => {
     dispatch(getProductDetailAsync())
       .unwrap()
@@ -104,8 +102,7 @@ const ProductDetails = () => {
       <View style={styles.carouselContainer}>
         <FlatList
           ref={flatListRef}
-          // data={productDetail?.imageUrls}
-          data={URL}
+          data={productDetail?.imageUrls}
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
